@@ -1,0 +1,13 @@
+ORG 0000H 
+MOV R0, #20H 
+MOV R1, #30H 
+MOV R3, #04H 
+UP: MOV A, @R0 
+
+XCH A, @R1 
+MOV @R0, A 
+INC R0 
+INC R1 
+DJNZ R2, UP 
+END 
+
